@@ -49,13 +49,13 @@ google-pasta==0.2.0
 grandalf==0.6
 gunicorn==20.1.0
 gym==0.21.0
-heroku==0.1.4
+heroku
 
 imutils==0.5.4
 
 ipython-genutils==0.2.0
 
-kaggle==1.5.12
+
 keras-nightly==2.5.0.dev2021032900
 
 mailchecker==4.1.17
