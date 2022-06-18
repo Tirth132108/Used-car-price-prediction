@@ -1,4 +1,3 @@
-absl-py @ file:///home/conda/feedstock_root/build_artifacts/absl-py_1606234718434/work
 aiohttp==3.8.1
 aiohttp-retry==2.4.6
 aiosignal==1.2.0
