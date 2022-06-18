@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Used Car Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
+<div class="container">
+  <h1 class="jumbotron bg-primary">Used car price prediction</h1>
+  
+  <form class="form-horizontal" action="/submit" method="POST" enctype="multipart/form-data" style="align-items: center;">
+        <div class ="from-group">
+            <label for="inputcarname">Car Name</label>
+            <input type="text" class="form-control" id="inputcarname" name="Name" placeholder="For ex: Nissan, Honda">
+        </div>
+        <div class ="from-group ">
+            <label for="car Location">Location</label>
+            <input type="text" class="form-control" id="carlocation" name="Location" placeholder="Location of Car">
+        </div>
+        <div class ="from-group ">
+            <label for="caryear">Car Make year</label>
+            <input type="i" class="form-control" id="caryear" name="Year" placeholder="Make year of car">
+        </div>
+        <div class ="from-group ">
+            <label for="Kilometersdriven">Car's current kilometers</label>
+            <input type="number" class="form-control" id="Kilometersdriven" name="Kilometers_Driven" placeholder="Kilometers Drived by car">
+        </div>
+        <div class ="from-group ">
+            <label for="Fuel_Type">Fuel_Type</label>
+            <select class ="form-control" id="Fuel_Type" name="Fuel_Type">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value = "CNG">CNG</option>
+            </select>
+        </div>
+    
+       
+        <div class ="from-group ">
+            <label for="transmission">Car Transmission</label>
+            <select class ="form-control" id="transmission" name="Transmission">
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+            </select>
+        </div>
+        <div class = "from-group ">
+            <label for="Owner_type">Car Ownership</label>
+            <select  class="form-control" id="Owner_type" name="Owner_Type">
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+                <option value="Fourth">Fourth</option>        
+            </select>
+        </div>
+        <div class ="from-group ">
+            <label for="mileage">Car Mileage</label>
+            <input type="number" class="form-control" id="mileage" name="Mileage" placeholder="Mileage of car">
+        </div>
+        <div class ="from-group ">
+            <label for="engine_size">Car's Engine</label>
+            <input type="text" class="form-control" id="inputcarname" name="Engine"placeholder="For ex: 998 CC">
+        </div>
+        <div class ="from-group ">
+            <label for="car_power">Car's Power</label>
+            <input type="text" class="form-control" id="car_power" name="Power" placeholder="For ex: 58.16 bhp">
+        </div>
+        <div class ="from-group ">
+            <label for="car_seats">Car Seats</label>
+            <input type="number" class="form-control" id="car_seats" name="Seats" placeholder="For ex: 1,2,3,..">
+        </div>
+        <br>
+        <div class ="from-group ">
+            <button type="submit" class="btn btn-primary">Predict Price</button>
+        </div>
+       
+  </form>
+
+	        {% if prediction %}
+    <div>
+        <h3>You can sale your car for: {{ prediction}} lakh</h3>
+    </div>
+  
+	            {% endif %}
+
+</div>
+
+</body>
+</html>
