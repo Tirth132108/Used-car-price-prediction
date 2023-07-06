@@ -17,9 +17,10 @@ Clone the GitHub repository to your local machine:
 git clone https://github.com/Tirth132108/Used_Car_Price_Prediction.git
 
 
+'''
 bash
-Copy code
 git clone https://github.com/Tirth132108/Used_Car_Price_Prediction.git
+'''
 Set up a Python virtual environment and activate it.
 
 Install the required dependencies by running the following command:
